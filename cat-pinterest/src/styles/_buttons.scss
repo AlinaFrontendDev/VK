@@ -1,0 +1,18 @@
+button {
+    background: $primary-color;
+    border: none;
+    color: $secondary-color;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  
+    &.load-more {
+      margin: 16px auto;
+      display: block;
+    }
+  }
+  
