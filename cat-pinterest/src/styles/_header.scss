@@ -1,10 +1,9 @@
 header {
     background-color: $primary-color;
-    padding: 62px;
   
     nav {
       @include flex-layout;
-      
+      padding-left: 62px;
   
       button {
         background: transparent;
