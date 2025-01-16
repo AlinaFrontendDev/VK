@@ -1,13 +1,18 @@
 button {
-    background: $primary-color;
-    border: none;
-    color: $secondary-color;
-    padding: 8px 23px;
-    cursor: pointer;
-    transition: background 0.3s;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  background: $primary-color;
+  border: none;
+  color: $secondary-color;
+  padding: 8px 23px;
+  cursor: pointer;
+  transition: background 0.3s;
   
-    &:hover {
-      background: $hover-button-color;
-    }
+  &:hover {
+    background: $hover-button-color;
   }
+}
   
