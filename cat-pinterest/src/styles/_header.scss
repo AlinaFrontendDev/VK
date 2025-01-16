@@ -1,33 +1,27 @@
 header {
     background-color: $primary-color;
-    padding: 16px;
-  
-    h1 {
-      color: $secondary-color;
-      text-align: center;
-      margin: 0;
-    }
+    padding: 62px;
   
     nav {
-      @include flex-center;
-      gap: 16px;
+      @include flex-layout;
+      
   
       button {
-        background: none;
-        border: 2px solid $secondary-color;
+        background: transparent;
+        border: none;
         color: $secondary-color;
-        padding: 8px 16px;
+        padding: 26px 23px;
         cursor: pointer;
         transition: background 0.3s;
   
         &:hover {
-          background: $secondary-color;
-          color: $primary-color;
+          background: $hover-button-color;
+          color: $secondary-color;
         }
   
         &.active {
-          background: $secondary-color;
-          color: $primary-color;
+          background: $active-button-color;
+          color: $secondary-color;
         }
       }
     }
