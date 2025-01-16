@@ -1,12 +1,11 @@
-@import 'variables';
-@import 'mixins';
-@import 'header';
-@import 'buttons';
-@import 'grid';
+@import "variables";
+@import "mixins";
+@import "header";
+@import "buttons";
+@import "grid";
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background-color: $background-color;
   color: $text-color;
 }
