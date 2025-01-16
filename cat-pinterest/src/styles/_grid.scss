@@ -1,68 +1,60 @@
 .cat-grid {
-    @include grid-layout(5, $grid-gap);
-    padding: 48px 62px;
-    background-color: $background-color;
-  
-    .cat-item {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      background: $secondary-color;
-      transition: transform 0.3s, box-shadow 0.3s;
-      border: none;
-  
-      &:hover {
-        transform: scale(1.05);
-        max-width: 256px;
-        max-height: 256px;
-        box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.3);
-      }
-  
-      .image-wrapper {
-        position: relative;
-        width: 100%;
-        height: $grid-item-size;
-        overflow: hidden;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s;
-        }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 48px;
+  padding: 48px 62px;
+  background-color: $background-color;
+  margin: 0 auto;
 
-        // простите, но это очень красиво, не могла не добавить 
-        &:hover img {
-          transform: scale(1.1);
+  .cat-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: $secondary-color;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: $grid-item-size;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      // простите, но это очень красиво, не могла не добавить
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      .favorite-button {
+        position: absolute;
+        bottom: 19px;
+        right: 19px;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &.active {
+          display: block;
         }
-  
-        .favorite-button {
-          position: absolute;
-          bottom: 8px;
-          right: 8px;
-          background: rgba(255, 255, 255, 0.8);
-          border: none;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 20px;
-          color: $primary-color;
-          cursor: pointer;
-          opacity: 0;
-          transition: opacity 0.3s;
-  
-          &.active {
-            background: $primary-color;
-            color: $secondary-color;
-          }
-        }
-  
-        &:hover .favorite-button {
-          opacity: 1;
-        }
+      }
+
+      &:hover .favorite-button {
+        opacity: 1;
       }
     }
   }
+}
